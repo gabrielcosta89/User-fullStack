@@ -1,4 +1,4 @@
-import Contato from "./Contato.entity";
-import Cliente from "./Cliente.entity";
+import {Contact} from "./Contato.entity";
+import Client from "./Cliente.entity";
 
-export {Cliente,Contato}
+export {Client,Contact}

@@ -6,10 +6,10 @@ import {
   ManyToOne,
 } from "typeorm";
 
-import { Cliente } from "./Cliente.entity";
+import { Client } from "./Cliente.entity";
 
-@Entity("Contato")
-export class Contato {
+@Entity("contact")
+export class Contact {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -23,10 +23,9 @@ export class Contato {
   telefone: string;
 
   @CreateDateColumn()
-  dataDeRegistro: Date;
+  createdAt: Date;
 
-  @ManyToOne(() => Cliente, (cliente) => cliente.contatos)
-  cliente: Cliente;
+  // Many-to-One relationship with the Client entity
+  @ManyToOne(() => Client, (client) => client.contacts)
+  client: Client;
 }
-
-export default Contato

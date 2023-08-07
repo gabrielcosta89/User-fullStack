@@ -2,7 +2,7 @@ import "reflect-metadata";
 import { DataSource, DataSourceOptions } from "typeorm";
 import "dotenv/config";
 import path from "path";
-import { Cliente, Contato } from "./entities.ts";
+import { Client, Contact } from "./entities.ts";
 
 
 const DataSourceConfig = (): DataSourceOptions => {
@@ -19,7 +19,7 @@ const DataSourceConfig = (): DataSourceOptions => {
     url: dbUrl,
     synchronize: false,
     logging: true,
-    entities: [Cliente,Contato],
+    entities: [Client,Contact],
     migrations: [migrationsPath],
   };
 };
