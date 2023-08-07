@@ -13,6 +13,22 @@ Bibliotecas e Frameworks: bcrypts, TypeORM e zod.
 Banco de Dados: Postgres.
 Estrutura do Back-end
 
+Comandos iniciais:
+npm init --y -->para iniciar o node js
+npm install -->dotenv para variáveis de ambiente, use .env.example como modelo 
+instale as dependencias e tipagens necessarias para o projeto :
+npm install express typescript ts-node
+npm install --save-dev @types/express @types/node
+npm install bcrypt
+npm install --save-dev @types/bcrypt
+npm install typeorm pg
+npm install zod
+para rodar as migrations rode os seguintes comandos:
+npm run typeorm migration:generate ./src/migrations/InitialMigration -- -d ./src/data-source.ts
+npm run typeorm migration:run -- -d ./src/data-source
+
+
+
 O código fonte está organizado da seguinte maneira:
 
 /backend: Diretório que aloca todos os arquivos responsáveis pela lógica do servidor.
