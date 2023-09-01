@@ -15,6 +15,24 @@ export const DashboardStyles = styled.main`
     margin: 0 auto;
     max-width: 600px;
     width: 100%;
+    .contact-actions {
+      .button1 {
+        margin-left: 10px;
+        background-color: var(--color-brand-1);
+        color: var(--color-white-fixed);
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem;
+      }
+      .button2 {
+        margin-left: 10px;
+        background-color: var( --color-feedback-alert-1);
+        color: var(--color-white-fixed);
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem;
+      }
+    }
   }
 
   h1 {

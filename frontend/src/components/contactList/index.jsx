@@ -14,7 +14,7 @@ export const ContactList = () => {
    
 
     const handleUpdate = (updatedData) => {
-   
+   console.log(updatedData)
     };
 
     useEffect(()=>{
