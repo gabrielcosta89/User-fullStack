@@ -3,12 +3,13 @@ import { DashboardStyles } from "./style";
 import { toast } from "react-toastify";
 import { api } from "../../services/api";
 import { DeleteModal } from "../modalDeleteAccount";
+import { useNavigate } from "react-router-dom";
 
 export const DashboardProfile = () => {
   const [showModal, setShowModal] = useState(false);
 
     const [user,setUser]=useState({})
-
+  const navigate=useNavigate()
   const token = localStorage.getItem('token') || ""
 
   useEffect(()=>{
@@ -37,7 +38,10 @@ export const DashboardProfile = () => {
     getClient()
    
   },[])
-
+const Logout=()=>{
+  localStorage.clear()
+  navigate('/')
+}
   return (
     <DashboardStyles>
       <section>
@@ -60,6 +64,7 @@ export const DashboardProfile = () => {
         </div>
         <div className="contact-actions">
                     <button className="button1">Edit</button>
+                    <button onClick={()=>{Logout()}} className="button1">Log out</button>
                     <button className="button2" onClick={() => setShowModal(true)}>Delete account</button>
                   </div>
       </section>
