@@ -15,18 +15,10 @@ export const Login= () => {
       const response = await api.post("/api/login-clients",data);
       const {token} = response.data
       localStorage.setItem('token',token)
-      toast.success('successfuly logged in', {
-position: "top-right",
-autoClose: 2000,
-hideProgressBar: false,
-closeOnClick: true,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "colored",
-});
+
+navigate('/dashboard')
+
     } catch (error) {
-      console.log(error.response.data.message)
       toast.warn('make sure email and password are correct', {
         position: "top-right",
         autoClose: 5000,
