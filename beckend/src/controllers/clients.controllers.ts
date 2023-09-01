@@ -4,7 +4,7 @@ import { createClientService, deleteClientService, listClientService, patchClien
 
 // Controller for creating a new client
 export const createClientsController = async (req: Request, res: Response): Promise<Response> => {
-    console.log('hey')
+
     const clientData: TClientRequest = req.body;
 
     // Call the service function to create the client and receive the response
